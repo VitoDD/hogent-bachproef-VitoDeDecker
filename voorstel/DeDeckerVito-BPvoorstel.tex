@@ -6,28 +6,28 @@
 
 % Voor een voorstel in het Engels: voeg de documentclass-optie [english] toe.
 % Let op: kan enkel na toestemming van de bachelorproefcoördinator!
-\documentclass{hogent-article}
+\documentclass[english]{hogent-article}
 
 % Invoegen bibliografiebestand
 \addbibresource{voorstel.bib}
 
 % Informatie over de opleiding, het vak en soort opdracht
-\studyprogramme{Professionele bachelor toegepaste informatica}
-\course{Bachelorproef}
-\assignmenttype{Onderzoeksvoorstel}
+% \studyprogramme{Professional Bachelor's Degree in Applied Computer Science}
+% \course{Bachelor Thesis}
+% \assignmenttype{Research Proposal}
 % Voor een voorstel in het Engels, haal de volgende 3 regels uit commentaar
-% \studyprogramme{Bachelor of applied information technology}
-% \course{Bachelor thesis}
-% \assignmenttype{Research proposal}
+ \studyprogramme{Bachelor of applied information technology}
+ \course{Bachelor thesis}
+ \assignmenttype{Research proposal}
 
-\academicyear{2022-2023} % TODO: pas het academiejaar aan
+\academicyear{2024-2025} % TODO: pas het academiejaar aan
 
 % TODO: Werktitel
-\title{Vul hier de voorgestelde titel van je onderzoek in}
+\title{Using AI for Debugging with Automated Visual Testing in CI/CD Pipelines}
 
 % TODO: Studentnaam en emailadres invullen
-\author{Ernst Aarden}
-\email{ernst.aarden@student.hogent.be}
+\author{Vito De Decker}
+\email{vito.dedecker@student.hogent.be}
 
 % TODO: Medestudent
 % Gaat het om een bachelorproef in samenwerking met een student in een andere
@@ -36,7 +36,7 @@
 % \email{yasmine.alaoui@student.hogent.be}
 
 % TODO: Geef de co-promotor op
-\supervisor[Co-promotor]{S. Beekman (Synalco, \href{mailto:sigrid.beekman@synalco.be}{sigrid.beekman@synalco.be})}
+\supervisor[Co-promotor]{H. Van de Velde (Wolters Kluwer, \href{mailto:hendrik.vandevelde@wolterskluwer.be}{hendrik.vandevelde@wolterskluwer.be})}
 
 % Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
 % Kies uit deze lijst:
@@ -49,13 +49,13 @@
 % - Als het onderzoek niet past binnen een van deze domeinen specifieer je deze
 %   zelf
 %
-\specialisation{Mobile \& Enterprise development}
-\keywords{Scheme, World Wide Web, $\lambda$-calculus}
+\specialisation{Functional \& Business Analysis}
+\keywords{Artificial Intelligence, Automated Testing, Visual Testing, Continuous Integration, Continuous Deployment, Debugging}
 
 \begin{document}
 
 \begin{abstract}
-  Hier schrijf je de samenvatting van je voorstel, als een doorlopende tekst van één paragraaf. Let op: dit is geen inleiding, maar een samenvattende tekst van heel je voorstel met inleiding (voorstelling, kaderen thema), probleemstelling en centrale onderzoeksvraag, onderzoeksdoelstelling (wat zie je als het concrete resultaat van je bachelorproef?), voorgestelde methodologie, verwachte resultaten en meerwaarde van dit onderzoek (wat heeft de doelgroep aan het resultaat?).
+  Efficient quality assurance in a CI/CD pipeline is a serious issue because classical visual testing often causes false positives that require lots of time-consuming debugging by developers. This study investigates whether AI technologies can significantly help improve automated visual testing and reduce debugging time, while adding self-healing capabilities. We conduct a proof-of-concept on the effectiveness of AI to identify and resolve visual errors automatically with no significant human intervention. The findings of this study provide insight and recommendations into the adoption of AI-driven debugging in CI/CD pipelines for optimized software quality and release efficiency.
 \end{abstract}
 
 \tableofcontents
@@ -64,6 +64,6 @@
 % kan opgenomen worden in de bijlagen van de bachelorproef zelf.
 \input{voorstel-inhoud}
 
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
 
 \end{document}

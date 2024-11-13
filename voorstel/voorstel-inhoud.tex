@@ -12,41 +12,40 @@
 % uitgewerkt (met medesturent VOORNAAM NAAM als mede-auteur).
 % 
 
-\section{Inleiding}%
-\label{sec:inleiding}
-
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
-
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
-
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
-
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
+\section{Introduction}%
+\label{sec:Introduction}
+Quality assurance plays an indispensable role in everyday software development. In environments where continuous new improvements are implemented, we cannot afford to waste time, which unfortunately often happens during the final step of integrating new code. Therefore, detecting errors in software promptly is crucial to preventing issues during and after release.
+With this research, we aim to address a specific issue faced by Wolters Kluwer: resolving errors in new code integrations. As technology has evolved, we have moved from manual to automated testing, with visual testing proven as an effective approach. The next step is obviously to use AI to speed up the resolution of errors. 
+In this bachelor’s thesis, we investigate how AI can be used to improve the automated process of visual testing within CI/CD pipelines. Our focus is primarily on reducing the debugging time required after a test fails, using AI. Through a proof-of-concept, we aim to demonstrate how AI can detect visual errors and identify the associated code.
+Furthermore, we will experiment with how AI can implement self-healing; in other words, how AI can devise its solution to a problem that arises. Our focus is specifically on exploring how AI can optimize the debugging process, with the goal of minimizing both time and the need for manual intervention.
 
 %---------- Stand van zaken ---------------------------------------------------
 
-\section{Literatuurstudie}%
-\label{sec:literatuurstudie}
-
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
-
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
-
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
-
+\section{State-of-the-art}%
+\label{sec:State-of-the-art}
+When CI/CD is implemented, code quality is improved, and software updates are delivered rapidly with high confidence that they won't introduce breaking modifications.
+Automated testing has become an indispensable component of successful CI/CD pipelines and is key to ensuring quality and reliability.
+By reducing the amount of manual effort necessary, we can accelerate the delivery of high-quality software.
+One of the ways to do this is by utilizing AI techniques for multiple components of automated testing.
+Topics such as test case generation, test prioritization, defect prediction, and self-healing tests are promising techniques that, while not yet fully developed or researched, hold great potential for the future and their adaptation in CI/CD pipelines will bring great value. 
+\autocite{Kaniganti}
+Self-healing tests are a proven concept and are services offered by multiple test frameworks. The main objective is to fix simple problems that are time-consuming. The AI is dynamic and can handle problems while not requiring human attention or manual labor.\autocite{Shabarish2024}
+AI-driven test automation is now face-changing software testing, ranging from functional, performance, and visual testing by off-loading much of these tasks from human testers. For instance, techniques of automated visual testing use AI in performing the detection of visual appearances of GUI bugs that might be left unnoticed by other testing methods. These tools can analyze screenshots, perform object detection, and classify changes to improve the quality of user interfaces.
+\autocite{Gamal2023}
+AI applications in automated testing have various methodologies associated with them. In some cases, for example, visual GUI testing employs image recognition to simulate human activities; hence, it allows more dynamic interfaces to be tested.
+\autocite{BaniMuhamad2016}
+Along with this, AI-enabled techniques like machine learning and computer vision applied to the testing tool help make the tests more dynamic with software changes and generate and execute better test cases.
+\autocite{Trudova.2020}
+AI debugging tools parse lines of code, finding potential issues faster and more effectively than any human manual method could. Generative AI creates new test cases and data to find those bugs hidden deep inside complex systems, such as neural networks.
+\autocite{Staron2024}
+This facility speeds up the debugging process and decreases manual effort, thus saving the developers for more critical work.
+AI plays a major role in amplifying CI/CD practices with the automation of integration and deployment. AI-driven CI/CD tools can track changes to code, automatically perform tests, and carry out application deployment with as little human interference as possible, ultimately attaining quicker speeds while not compromising on reliability in software delivery.
+\autocite{Mohammed2024}
+This automation supports high-quality standards with rapid changes in software requirements.
+On the other hand, the advantages have their own challenges. For example, there is an immense requirement for robust training data in AI integration within software engineering. Then again, there might be error introductions because of the complete reliance on AI algorithms. With increasing research, the field is trying to evolve more enhanced models and tools of AI which can handle such complexities of testing and debugging software.
+\autocite{Steidl2023}
+Traditional visual testing relies on pixel-by-pixel comparisons, which results in a number of false positives due to minor rendering differences, like anti-aliasing effects. AI can include context-aware analysis: it understands the meaning of spatial relationships and the contextual significance of every UI element. AI would, for example, distinguish between acceptable variations-like slight color changes based on display settings-and actual defects.
+\autocite{Moradi2024}
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
 %   geen onderdeel is van de zin.
@@ -54,31 +53,33 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
-
 %---------- Methodologie ------------------------------------------------------
-\section{Methodologie}%
-\label{sec:methodologie}
-
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
-
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
-
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
-
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
-
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
-
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
-
+\section{Methodology}%
+\label{sec:methodology}
+In the first phase, the objective is to gather sophisticated knowledge about the subject.
+The purpose is to gather and deconstruct academic papers, relevant articles, and manuals that articulate the concepts of debugging and automated testing.
+Furthermore, this research will concentrate on examining contemporary technologies that contribute to advancements in debugging practices, alongside an examination of the current usages of artificial intelligence in optimizing debugging processes.
+The techniques we find to be currently used will be examined and and researched.
+Ending the first phase, we will set clear objectives and criteria to determine the future of this research.
+The different use cases of AI will be compared to each other and a determination will be made of which of these use cases is most fit and feasable to produce.
+In the third phase a determination will be made of which AI tool will be used and if there are any frameworks or technologies that already made advancements useful for this study.
+Following the third phase will be used to gather the correct application(s) and data to test and make a proof-of-concept around.
+It's very important that this application has a broad scala of functions and data to be tested.
+In the fifth phase the proof-of-concept will be fabricated on a specific technique of how AI can help debugging in a visual testing scenario.
+Which resources are required will be dependent on which solution we will work on, determined in phase 2.
+The model will be trained with the data we gathered in the third phase.
+After the proof-of-concept is finished, the possibilities to implement this inside of a CI/CD pipeline will be researched.
+A recommendation will be written on how to implement the most workable and efficiënt model to use inside of an automated testing environment.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{../graphics/BPVOORSTELVITODEDECKER.drawio.png}
+    \caption{VisualRepresentation}
+    \label{fig:VisualRepresentation}
+\end{figure}
 %---------- Verwachte resultaten ----------------------------------------------
-\section{Verwacht resultaat, conclusie}%
-\label{sec:verwachte_resultaten}
+\section{Expected results}%
+\label{sec:Expected results}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+By studying the available AI-powered debugging and visual testing solutions, we should be in a position to ascertain whether the effort of developing a similar solution would be expedient or not for integration into a CI/CD pipeline. Given the unrelenting demand for efficiency in error resolution and the rarity of widely embraced AI-powered solutions in the realm of visual testing, there is certainly every reason to believe that an implementation of a custom AI solution will carry significant value with it.
+This proof of concept can help reduce error detection, debugging time, and manual efforts being invested in software quality by providing quick and reliable ways of software release. There is little or no competition in this AI-assisted visual debugging solution in the continuous integration/continuous deployment segment, and the market opportunity looks good for the solution.
 
